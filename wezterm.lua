@@ -20,7 +20,7 @@ config.font = wezterm.font("Iosevka")
 config.font_size = 16
 
 -- Tab Bar
-config.use_fancy_tab_bar = true
+config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
