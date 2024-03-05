@@ -90,20 +90,26 @@ config.keys = {
   },
 
   {
-    key = "n",
-    mods = "LEADER",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-  },
-  {
     key = "v",
     mods = "LEADER",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = "n",
+    mods = "LEADER",
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
 
   {
-    key = "M",
+    key = "m",
     mods = "LEADER",
-    action = wezterm.action.TogglePaneZoomState,
+    action = act.TogglePaneZoomState,
+  },
+
+  {
+    key = "q",
+    mods = "LEADER",
+    action = act.CloseCurrentPane({ confirm = true }),
   },
 }
 
