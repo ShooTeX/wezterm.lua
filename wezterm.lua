@@ -33,5 +33,75 @@ config.window_padding = {
   bottom = 0,
 }
 
+-- leader
+config.leader = { key = "a", mods = "CTRL" }
+
+local act = wezterm.action
+
+config.keys = {
+  -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
+  {
+    key = "a",
+    mods = "LEADER|CTRL",
+    action = act.SendKey({ key = "a", mods = "CTRL" }),
+  },
+
+  -- Pane management
+  {
+    key = "H",
+    mods = "LEADER",
+    action = act.PaneDirectionLeft,
+  },
+  {
+    key = "J",
+    mods = "LEADER",
+    action = act.PaneDirectionDown,
+  },
+  {
+    key = "K",
+    mods = "LEADER",
+    action = act.PaneDirectionUp,
+  },
+  {
+    key = "L",
+    mods = "LEADER",
+    action = act.PaneDirectionRight,
+  },
+
+  {
+    key = "H",
+    mods = "LEADER",
+    action = act.AdjustPaneSize({ "Left", 5 }),
+  },
+  {
+    key = "J",
+    mods = "LEADER",
+    action = act.AdjustPaneSize({ "Down", 5 }),
+  },
+  { key = "K", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
+  {
+    key = "L",
+    mods = "LEADER",
+    action = act.AdjustPaneSize({ "Right", 5 }),
+  },
+
+  {
+    key = "N",
+    mods = "LEADER",
+    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = "V",
+    mods = "LEADER",
+    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+  },
+
+  {
+    key = "M",
+    mods = "LEADER",
+    action = wezterm.action.TogglePaneZoomState,
+  },
+}
+
 -- and finally, return the configuration to wezterm
 return config
