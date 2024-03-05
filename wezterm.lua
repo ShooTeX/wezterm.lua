@@ -50,22 +50,22 @@ config.keys = {
   {
     key = "H",
     mods = "LEADER",
-    action = act.PaneDirectionLeft,
+    action = act.ActivatePaneDirection("Left"),
   },
   {
     key = "J",
     mods = "LEADER",
-    action = act.PaneDirectionDown,
+    action = act.ActivatePaneDirection("Down"),
   },
   {
     key = "K",
     mods = "LEADER",
-    action = act.PaneDirectionUp,
+    action = act.ActivatePaneDirection("Up"),
   },
   {
     key = "L",
     mods = "LEADER",
-    action = act.PaneDirectionRight,
+    action = act.ActivatePaneDirection("Right"),
   },
 
   {
