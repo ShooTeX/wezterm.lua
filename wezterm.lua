@@ -48,22 +48,22 @@ config.keys = {
 
   -- Pane management
   {
-    key = "H",
+    key = "h",
     mods = "LEADER",
     action = act.ActivatePaneDirection("Left"),
   },
   {
-    key = "J",
+    key = "j",
     mods = "LEADER",
     action = act.ActivatePaneDirection("Down"),
   },
   {
-    key = "K",
+    key = "k",
     mods = "LEADER",
     action = act.ActivatePaneDirection("Up"),
   },
   {
-    key = "L",
+    key = "l",
     mods = "LEADER",
     action = act.ActivatePaneDirection("Right"),
   },
@@ -78,7 +78,11 @@ config.keys = {
     mods = "LEADER",
     action = act.AdjustPaneSize({ "Down", 5 }),
   },
-  { key = "K", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
+  {
+    key = "K",
+    mods = "LEADER",
+    action = act.AdjustPaneSize({ "Up", 5 }),
+  },
   {
     key = "L",
     mods = "LEADER",
@@ -86,12 +90,12 @@ config.keys = {
   },
 
   {
-    key = "N",
+    key = "n",
     mods = "LEADER",
     action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   {
-    key = "V",
+    key = "v",
     mods = "LEADER",
     action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
