@@ -95,7 +95,7 @@ config.keys = {
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   {
-    key = "n",
+    key = "s",
     mods = "LEADER",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
