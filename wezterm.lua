@@ -115,5 +115,36 @@ config.keys = {
 
 config.front_end = "WebGpu"
 
+local default_padding = {
+  left = 10,
+  right = 10,
+  top = 10,
+  bottom = 10,
+}
+
+config.window_padding = default_padding
+
+local function adjust_padding(window, pane)
+  local overrides = {}
+  local process_name = pane:get_foreground_process_name()
+
+  -- If Neovim is detected, remove padding
+  if process_name:find("nvim") then
+    overrides.window_padding = {
+      left = 0,
+      right = 0,
+      top = 0,
+      bottom = 0,
+    }
+  else
+    -- Default padding
+    overrides.window_padding = default_padding
+  end
+
+  window:set_config_overrides(overrides)
+end
+
+wezterm.on("update-right-status", adjust_padding)
+
 -- and finally, return the configuration to wezterm
 return config
