@@ -13,11 +13,11 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "GitHub Dark"
 
 -- Font
 config.font = wezterm.font("Iosevka")
-config.font_size = 16
+config.font_size = 18
 
 -- Tab Bar
 config.use_fancy_tab_bar = false
