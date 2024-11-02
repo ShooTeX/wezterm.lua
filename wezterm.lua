@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "GitHub Dark"
+config.color_scheme = "carbonfox"
 
 -- Font
 config.font = wezterm.font("Iosevka")
